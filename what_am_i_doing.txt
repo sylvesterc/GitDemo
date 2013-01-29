@@ -1,0 +1,4 @@
+1) Install Git-1.8.0-preview20121011 (1).exe
+2) Install TortoiseGit-1.8.0.0-64bit.msi
+3) Open Git Gui (start menu > programs > git > git gui)
+4) Create a new repository in e:\GitDemo --> creates .git folder

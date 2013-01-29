@@ -1,0 +1,86 @@
+Last Update:  08/10/2012
+By:  C. Sylvester
+
+These executables contain common Python modules for scientific data analysis and
+visualization.
+
+All the packages are located in: 
+
+\\ozma\support\software\Python2.6
+
+This document includes instructions for installating these modules and links to 
+background information.  Please install all these packages by copying them locally,
+and running them as administrator. 
+
+They are listed in the order in which you should install them.
+
+1a) THIS IS STRONGLY RECOMMENDED:  PyScripter (http://code.google.com/p/pyscripter/)- a
+very nice open-source Python IDE; 
+
+- or -
+
+1b) Console (http://sourceforge.net/projects/console/) - a better windows 
+command prompt/window; copy \\ozma\support\software\Python2.6\Console-2.00b147-
+Beta_32bit\Console2 to your local C: drive.
+
+2) Ipython (http://ipython.scipy.org/moin/) - an interactive Python 
+programming/data exploration environment that runs in Python IDE. 
+Copy the executable to your Desktop and then run the executable,
+ipython-0.10.2.win32-setup.exe as adiminstrator.  During setup, make sure it locates the 
+info for your Python 2.6 installation in the ArcGIS installation directory.
+
+3) Pyreadline (http://ipython.scipy.org/moin/PyReadline/Intro) - enables very 
+handy tab completion, "arrowing up" through past commands, etc. in the 
+Python IDE.  Run the executable pyreadline-1.5-win32-
+setup.exe.  During setup, make sure it locates the info for your Python 2.6 
+installation in the ArcGIS installation directory.
+
+* If it is not there already, add the Python path to your Path environment 
+variable (System variable).  The path should be C:\Python26\ArcGIS10.0.  
+
+* If you'll use the Console window, make a shortcut to it on your desktop, otherwise
+skip to step 4.  Edit the Console shortcut properties such that Ipython is automatically
+loaded by Console.  Set the Target: to 
+
+C:\Console2\Console.exe -r "/k python.exe 
+c:\python26\ArcGIS10.0\scripts\ipython.py -p sh"
+
+Then test your setup by opening the Console shortcut.  You should see a message 
+about successful installation and hitting enter to start Python.  Hit enter.  
+At the command prompt type "import arcpy" (don't type the "").  Then type 
+"arcpy." And a list of items should print to the screen.  That means 1) the 
+python environment is successfully loaded and 2) your ever important tab-
+completion is working!
+
+The next 3 packages work together:
+
+4) Numpy 1.6 (http://numpy.scipy.org/) - modules for scientific computing in 
+Python (Matlab-ish, better suited for some things but not necessarily 
+everything, provides for use of arrays and matrix math).  Run the executable 
+numpy-1.6.0b2-win32-superpack-python2.6.exe.
+
+5) Scipy (http://www.scipy.org/) - modules for more scientific computing 
+(advanced math, signal processings, statistics, etc.).  Run the executable scipy-
+scipy-0.11.0rc1-win32-superpack-python2.6.exe.
+
+6) Matplotlib (http://matplotlib.sourceforge.net/) - modules for data 
+visualization/exploration and publication quality graphics.  Run the 
+executable matplotlib-1.1.1.win32-py2.6.exe.
+
+
+Default installation directory for Python modules:
+C:\Python 26\ArcGIS10.0\Lib\site-packages
+
+Uninstalling Matplotlib:
+- In python, type
+import matplotlib as mpl  <enter>
+myDir = mpl.get_configdir() <enter>
+myDir <enter>
+- In Win Explorer, browse to location specified in myDir and
+delete what you see there
+- In Add/Remove Programs, select matplotlib and unstall it
+
+
+
+
+
